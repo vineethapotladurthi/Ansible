@@ -1,5 +1,6 @@
 - name: printing variables
-  host: web
+  hosts: web
+  become: yes
   tasks: #listing variable in different ways
   - name: normal declaration of variables
     ansible.builtin.debug:
