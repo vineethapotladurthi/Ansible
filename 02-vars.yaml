@@ -2,7 +2,9 @@
   host: web
   tasks: #listing variable in different ways
   - name: normal declaration of variables
+    ansible.builtin.debug:
+    msg: "the COURSE:{{COURSE}},DURATION:{{DURATION}}"
+  vars:
     COURSE: "JAVA"
     DURATION: 120hr
-    ansible.builtin.apt:
-    msg: "the COURSE:{{COURSE}},DURATION:{{DURATION}}"
+    
